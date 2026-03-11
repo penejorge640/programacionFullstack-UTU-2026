@@ -1,21 +1,17 @@
-# Programación Fullstack UTU 2026
+Este repositorio se utiliza para guardar los trabajos de Programación durante el año 2026.
 
-Este repositorio se utiliza para guardar los trabajos del curso de Programación Fullstack durante el año 2026.
-
-## Organización
-
-El repositorio está organizado por temas.
+El repositorio está organizado como me pinto
 
 Carpetas:
-- 01-introduccion
-- 02-git-github
-- 03-html
-- 04-css
-- 05-javascript
-- 06-java
-- 07-poo
-- 08-bases-de-datos
-- 09-proyectos
-- 10-practicas
+- 01-coso
+- 02-coso 1
+- 03-coso 2
+- 04-coso 3
+- 05-coso 4
+- 06-coso 5
+- 07-coso 6
+- 08-coso 7
+- 09-coso 8
+- 10-coso 9
 
-Elegí esta organización para separar los temas vistos en el curso y encontrar fácilmente cada trabajo.
+elegi organizarlo asi pq le pego al perro
