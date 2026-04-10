@@ -1,0 +1,52 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MAIN */
+main {
+    padding: 20px;
+}
+
+
+section {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.actividades {
+    background-color: #ffcccc;
+}
+
+.juegos {
+    background-color: #ccffcc;
+}
+
+.lugares {
+    background-color: #ccccff;
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
