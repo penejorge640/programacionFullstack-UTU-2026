@@ -1,15 +1,17 @@
+
+.pimba{
+    display: flex;
 .coso{
     width: 5px;
-    height: 130px;
+    height: 100px;
     background-color: rgb(40, 40, 207);
     display: inline-block;
-    margin-top: 100; 
 }
 
 .que {
     width: 300px;
-    height: 130px;
-    background-color: rgb(0, 255, 42);
+    height: 100px;
+    background-color: rgb(255, 0, 0);
     display: inline-block;
-    margin-top: 100; 
+}
 }
