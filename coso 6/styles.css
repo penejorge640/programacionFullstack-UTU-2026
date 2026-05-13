@@ -1,0 +1,369 @@
+
+/* parte 1 del css, Lucas Cabrera: https://www.youtube.com/@ByLuki_YT */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red:               hsl(7, 99%, 70%);
+  --yellow:            hsl(51, 100%, 49%);
+  --dark-cyan:         hsl(167, 40%, 24%);
+  --dark-blue:         hsl(198, 62%, 26%);
+  --mod-cyan:          hsl(168, 34%, 41%);
+  --very-dark-blue:    hsl(212, 27%, 19%);
+  --dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-mod-cyan:     hsl(232, 10%, 55%);
+  --grayish-blue:      hsl(210, 4%, 67%);
+  --white:             hsl(0, 0%, 100%);
+}
+
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background: url('https://sparkly-taffy-d6ebbc.netlify.app/images/desktop/image-header.jpg') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+}
+
+.pene {
+  height: 32px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+
+.btn-contact {
+  background: var(--white);
+  color: var(--very-dark-blue) !important;
+  font-family: 'Fraunces', serif !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em !important;
+  padding: 1rem 1.75rem;
+  border-radius: 50px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.btn-contact:hover {
+  background: hsla(0, 0%, 100%, 0.25) !important;
+  color: var(--white) !important;
+}
+
+
+.niga {
+  text-align: center;
+  margin-top: 8rem;
+  color: var(--white);
+}
+
+.niga h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+}
+
+/* felchovich animada arriba de la naranja */
+.arrow-down {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(12px); }
+}
+
+/* info mitad de pagina huevo, etc. */
+.align-info-imagen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.texto-info-mitad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 5.5rem;
+}
+
+.texto-info-mitad h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--very-dark-blue);
+  margin-bottom: 1.75rem;
+  line-height: 1.1;
+}
+
+.texto-info-mitad p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 38ch;
+}
+
+/* link de leer más con subrayado de color rojito ahí */
+.learn-more {
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--very-dark-blue);
+  position: relative;
+  width: fit-content;
+}
+
+.learn-more::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -4px;
+  right: -4px;
+  height: 8px;
+  border-radius: 4px;
+  z-index: -1;
+  opacity: 0.4;
+  transition: opacity 0.25s;
+}
+
+.learn-more.yellow::after { background: var(--yellow); }
+.learn-more.red::after    { background: var(--red); }
+.learn-more:hover::after  { opacity: 1; }
+
+/* mateo */
+
+.feature-image {
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* servicios por ahí */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service-card {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+  overflow: hidden;
+}
+
+/* imagen de fondo de cada una de las taretas */
+.service-card img.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.service-card .content {
+  position: relative;
+  z-index: 1;
+  max-width: 36ch;
+}
+
+.service-card h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* colores ahi fiumba */
+.service-card.graphic h2,
+.service-card.graphic p { color: var(--dark-cyan); }
+
+.service-card.photo h2,
+.service-card.photo p   { color: var(--dark-blue); }
+
+/* ══════════════════════════════
+   Jhony TEST
+══════════════════════════════ */
+.testimonials {
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.testimonials h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+  margin-bottom: 4rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial blockquote {
+  color: var(--dark-grayish-blue);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.testimonial cite {
+  font-style: normal;
+}
+
+.testimonial cite .name {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  color: var(--very-dark-blue);
+  margin-bottom: 0.4rem;
+}
+
+.testimonial cite .role {
+  font-size: 0.85rem;
+  color: var(--grayish-blue);
+}
+
+/* ══════════════════════════════
+   "Calculadora" con 20gb 
+══════════════════════════════ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ══════════════════════════════
+   LO que le gusta a Koshima
+══════════════════════════════ */
+footer {
+  background: hsl(167, 44%, 70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2.5rem;
+}
+
+.footer-logo {
+  height: 36px;
+  filter: brightness(0) saturate(100%) invert(31%) sepia(30%) saturate(600%) hue-rotate(130deg) brightness(80%);
+}
+
+footer nav ul {
+  gap: 2rem;
+}
+
+footer nav ul a {
+  color: var(--mod-cyan) !important;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+footer nav ul a:hover {
+  color: var(--white) !important;
+}
+
+/* Íconos nashe */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(31%) sepia(30%) saturate(600%) hue-rotate(130deg) brightness(80%);
+  transition: filter 0.2s;
+}
+
+.social-links a:hover img {
+  filter: brightness(0) invert(1);
+}

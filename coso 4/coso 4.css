@@ -1,0 +1,27 @@
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 20px;
+    display : inline-block;
+}
+.panzeta {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 20px;
+    display : inline-block;
+}
+.chorizo {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 20px;
+    display : inline-block;
+}
