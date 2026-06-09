@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: #f0f0f0;
+	padding: 20px;
+}
+
+.pito {
+	max-width: 600px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+.pito h1 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#mango {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+#mango label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#mango input[type="text"],
+#mango input[type="url"] {
+	padding: 8px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+#mango button[type="submit"] {
+	padding: 10px;
+	background: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+#cereza {
+	color: #d32f2f;
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+#pera {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+
+.manzana {
+	padding: 10px;
+	margin-bottom: 0;
+	border-radius: 4px;
+	background: #fff;
+	border: 1px solid #fff;
+}
+
+.platano {
+	display: flex;
+	gap: 8px;
+	margin-top: 10px;
+	justify-content: center;
+}
+
+.naranja {
+	padding: 8px 12px;
+	border-radius: 4px;
+	background: #007bff;
+	color: #fff;
+	border: 2px solid #000;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.naranja.fresa {
+	background: #dc3545;
+}
+
+.naranja.uva.limon {
+	background: #ffc107;
+	color: #000;
+}
+
+.manzana.durazno {
+	background: #fff;
+}
+

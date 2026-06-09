@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Galería de Imágenes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <h1>Galería de Imágenes</h1>
+
+  <div id="formulario">
+    <input type="text" id="titulo" placeholder="Nombre de la imagen">
+    <input type="text" id="url" placeholder="URL de la imagen">
+    <button id="btn-agregar">Agregar</button>
+    <p id="error">Completá ambos campos.</p>
+  </div>
+
+  <div id="stats">
+    <span>Total: <strong id="stat-total">0</strong></span>
+    <span>Favoritas: <strong id="stat-favs">0</strong></span>
+    <span>No favoritas: <strong id="stat-nofavs">0</strong></span>
+  </div>
+
+  <div id="filtros">
+    <button class="filtro" data-filtro="todas">Mostrar todas</button>
+    <button class="filtro" data-filtro="favoritas">Mostrar favoritas</button>
+    <button class="filtro" data-filtro="no-favoritas">Mostrar no favoritas</button>
+    <button id="btn-borrar">Borrar todo</button>
+  </div>
+
+  <div id="galeria">
+    <p id="vacio">No hay imágenes todavía.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

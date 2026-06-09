@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11 - Formulario de Imagen</title>
+    <link rel="stylesheet" href="ej11.css">
+</head>
+<body>
+    <div class="pito">
+        <h1>Formulario de Imagen</h1>
+        <form id="mango" novalidate>
+            <label for="imageTitle">Título de la imagen</label>
+            <input type="text" id="imageTitle" name="imageTitle" placeholder="Ingrese el título de la imagen" required>
+
+            <label for="imageUrl">URL de la imagen</label>
+            <input type="url" id="imageUrl" name="imageUrl" placeholder="https://ejemplo.com/imagen.jpg" required>
+
+            <div id="cereza" role="alert" aria-live="polite" style="color: #c00; margin-bottom: 0.8rem; display: none;"></div>
+
+            <button type="submit">Agregar</button>
+        </form>
+
+        <div id="pera"></div>
+    </div>
+
+    <script src="ej11.js"></script>
+</body>
+</html>
