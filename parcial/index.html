@@ -1,0 +1,84 @@
+,<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Mercado - API Live Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <main class="main-content">
+        <header class="header">
+            <div class="logo-row">
+                <div class="logo">Cyber API Store</div>
+                <nav class="categories-nav" id="categories-box">
+                    <button class="category-btn active" id="btn-all" onclick="loadProducts('todos')">🌐 Todo</button>
+                </nav>
+            </div>
+            <div class="header-right">
+                <button class="cart-trigger" onclick="openModal('cartModal')">
+                    🛒 Carrito <span class="cart-badge" id="cartCount">0</span>
+                </button>
+                <div class="auth-container" id="authBox">
+                    <button class="btn" style="padding: 6px 14px; font-size:13px;" onclick="openModal('loginModal')">🔑 Iniciar Sesión</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>FakeStore API Conectada</h1>
+            <p>Datos en tiempo real, persistencia híbrida de carrito y pasarela de simulación de usuarios.</p>
+        </section>
+
+        <h2 class="section-title" id="sectionTitle">Todos los Productos</h2>
+        <div class="grid" id="catalog"></div>
+    </main>
+
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-container">
+            <button class="close-modal" onclick="closeModal('productModal')">&times;</button>
+            <div class="modal-body">
+                <div class="modal-main-img-wrap">
+                    <img id="modalImg" class="modal-main-img" src="" alt="">
+                </div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDesc"></p>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #333; padding-top:15px;">
+                    <div class="modal-price" id="modalPrice" style="font-size:22px; font-weight:bold; color:var(--accent);"></div>
+                    <button class="btn" id="addToCartBtn">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-container" style="max-width: 400px;">
+            <div class="modal-body login-box">
+                <h2 style="margin-bottom:15px;">Acceso del Sistema</h2>
+                <p style="font-size:12px; color:var(--text-muted); margin-bottom:15px;">Usuario: <b>mor2314</b> — Contraseña: <b>83r5^</b></p>
+                <input type="text" id="usernameInput" placeholder="Nombre de usuario">
+                <input type="password" id="passwordInput" placeholder="Contraseña">
+                <button class="btn" style="width:100%; margin-top:10px;" onclick="handleLogin()">Entrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-container">
+            <button class="close-modal" onclick="closeModal('cartModal')">&times;</button>
+            <div class="modal-body">
+                <h2 style="margin-bottom:20px;">Tu Carrito de Compras</h2>
+                <div id="cartItemsContainer"></div>
+                <div style="margin-top:25px; padding-top:15px; border-top:1px solid #444; display:flex; justify-content:space-between; align-items:center;">
+                    <h3>Total: <span id="cartTotal" style="color:var(--accent);">$0.00</span></h3>
+                    <button class="btn" onclick="checkoutCart()">Proceder al Pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
